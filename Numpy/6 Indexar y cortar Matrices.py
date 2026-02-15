@@ -1,5 +1,4 @@
 #INDEXAR Y CORTAR UNA MATRIZ
-
 """
 Indexar y dividir matrices en Numpy se hace de la misma forma como se trabaja con listas 
 en Python, por ejemplo si quieres acceder a un deto especifico dentro de una matriz lo
@@ -42,8 +41,22 @@ print((a>5)|(a==5)) #Imprimir los valores mayores o iguales a 5
 #            [ True  True  True  True]]
 
 
+"""
+Tambien puedes usar (np.nonzero) para selecionar elementos o indices de una matriz
+por ejemplo:
+"""
 
-
-
+arr = np.array([[10,11,12,13],[14,15,16,17],[18,19,20,21]])
+#Usare (np.nonzero) para imprimir los indices de los elementos menores a 5
+arr_2 = np.nonzero(arr < 14)
+print(arr_2)
+#Impresion: (array([0, 0, 0, 0]), array([0, 1, 2, 3]))
+#¿Como se interpreta?:
+"""
+Fila 0 : Columna 0 -> 10
+Fila 0 : Columna 1 -> 11
+Fila 0 : Columna 2 -> 12
+Fila 0 : Columna 3 -> 13
+"""
 
 
