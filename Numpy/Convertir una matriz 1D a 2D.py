@@ -42,3 +42,21 @@ print(A3.shape)
 #Visualizacion: (1,2,3)
 
 
+
+
+#AHORA PASEMOS CON EL USO DE (np.expand_dims)
+"""
+Con (np.expand_dims) puedes insertar un nuevo eje en una posición específica
+los parametros de np.expand_dims son:
+- El arreglo que mas a modificar
+- "axis" que indica la posición
+"""
+b = np.array([1,2,3,4,5,6,7,8])
+
+b2 = np.expand_dims(b, axis = 1)
+print(b2.shape)
+#Impresion: (6,1)
+
+b3 = np.expand_dims(b, axis = 0)
+print(b3.shape)
+#Impresion: (1,6)
