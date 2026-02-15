@@ -1,7 +1,7 @@
 #INTRODUCCION A NUMPY
-
 """
-Matrices en Numpy:
+El objeto principal con el que trabaja Numpy es la matriz multidimensional homogenea
+Propiedades de las matrices:
 - Todos los elementos deben ser del mismo tipo
 - Una vez creada el tamaño de la matriz no se puede cambiar
 - Debe ser de forma rectangular, no irregular
