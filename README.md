@@ -7,3 +7,4 @@ Y otros conceptos fundamentales, yo tambien soy nuevo en esto pero este reposito
 # Fuentes :
 - https://numpy.org/
 - https://pandas.pydata.org/
+- https://realpython.com/
