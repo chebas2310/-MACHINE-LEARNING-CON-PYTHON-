@@ -29,6 +29,7 @@ print(s)
 #NOTA: al final pandas siempre imprimira el tipo de dato que contiene, en este caso "int64"
 
 
+
 #Para el siguiente ejemplo, crearemos un DataFrame, esta vez a partir de una lista de python
 df = ['Toyota', 'Subaru', 'Suzuki', 'Ford', 'Tesla']
 p = pd.DataFrame(df, columns = ['Cars']) #Cuando creas un DataFrame puedes añadirle un parametro extra al pd.DataFrame
@@ -42,6 +43,12 @@ print(p)                                 #esta parametro es el nombre de la etiq
 #    4   Tesla
 
 
+
+"""
+CONOCIMIENTO PREVIO: diccionarios en Python 
+Un diccionario en python es una estructura que almecena "key":"value", como su nombre lo indica
+cada valor esta asignado a una clave, "key" que se utilia para llamar al valor
+"""
 #Ahora creemos un dataframe a traves de un diccionário en python
 #Este diccionario guardara una lista de pasajeros del Titanic con sus nombre, edades y sexos
 nd = {
@@ -60,6 +67,38 @@ print(new_df)
 #    0  Brandon, Mr. Owen Harris   22    male
 #    1   Allen, Mr. William Henry   35    male
 #    2   Bonnell, Miss Elizabeth   58  female
+
+#Como vimos anteriormente al usar un diccionario de python para crear una serie o dataframe las "keys" se vuelven
+#las etiquetas de los índices, y los "values" los datos.
+
+
+
+
+#Ahora vamos a crear una serie, a partir de un funcion numpy que me genera 5 numeros aleatorios con 
+#distribución normal estandar, es decir (Media = 0, Desviacion Estandar = 1)
+s = pd.Series(np.random.randn(5), index = ["a","b","c","d","e"])
+print(s)
+#Impresión: 
+#    a    0.469112
+#    b   -0.282863
+#    c   -1.509059
+#    d   -1.135632
+#    e    1.212112
+#    dtype: float64
+#NOTA: mediante el parametro "index" puedes darle una etiqueta personalizada a los indices de tus filas
+
+
+
+#Hasta ahora hemos trabajo con arreglos de datos "ndarray", pero, ¿qué ocurre cuando un dato escalar y no una arrelgo?
+s2 = pd.Series(5.0, index = ["a", "b", "c", "d", "e"])
+print(s2)
+#Impresión: 
+#    a    5.0
+#    b    5.0
+#    c    5.0
+#    d    5.0
+#    e    5.0
+#    dtype: float64
 
 
 
